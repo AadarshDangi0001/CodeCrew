@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const DB_NAME = process.env.DB_NAME || "codecrew" ;
+const DB_NAME = process.env.DB_NAME || "team-codecrew" ;
 
 const connectDB = async () => {
     try {
