@@ -12,8 +12,8 @@ router.get("/google/callback",
     const token = req.user.getSignedJwtToken();
     res.cookie('token', token, {
       httpOnly: true,
-      sameSite: "lax",
-      secure: false, // true if using HTTPS
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      secure: process.env.NODE_ENV === 'production',
       maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
     });
     // Redirect to frontend after login
