@@ -18,7 +18,7 @@ if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
 passport.use(new GoogleStrategy({
   clientID: GOOGLE_CLIENT_ID,
   clientSecret: GOOGLE_CLIENT_SECRET,
-  callbackURL: "/api/v1/auth/google/callback"
+  callbackURL: "https://codecrew-exiy.onrender.com/api/v1/auth/google/callback"
 }, async (accessToken, refreshToken, profile, done) => {
   try {
     // Find or create user
