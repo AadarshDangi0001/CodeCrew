@@ -48,7 +48,7 @@ const Joincrew = () => {
     if (result.success) {
       // Application created (status pending). Now create a Razorpay order and charge ₹19.
       try {
-        const orderRes = await fetch('http://localhost:5050/api/v1/payment/create-order', {
+        const orderRes = await fetch('https://codecrew-exiy.onrender.com/api/v1/payment/create-order', {
           method: 'POST',
           credentials: 'include'
         });
@@ -78,7 +78,7 @@ const Joincrew = () => {
           handler: async function (response) {
             const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = response;
             try {
-              const verifyRes = await fetch('http://localhost:5050/api/v1/payment/verify', {
+              const verifyRes = await fetch('https://codecrew-exiy.onrender.com/api/v1/payment/verify', {
                 method: 'POST',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },

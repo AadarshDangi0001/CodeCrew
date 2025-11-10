@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
 
   // Logout function: clear user and optionally call backend logout
   const logout = async () => {
-    await fetch("http://localhost:5050/api/v1/auth/logout", {
+    await fetch("https://codecrew-exiy.onrender.com/api/v1/auth/logout", {
       method: "POST",
       credentials: "include",
     });

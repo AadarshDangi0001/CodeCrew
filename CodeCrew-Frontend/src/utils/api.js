@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5050/api/v1";
+const API_BASE = "https://codecrew-exiy.onrender.com/api/v1";
 
 // Users
 export async function getAllUsers() {
@@ -147,5 +147,5 @@ export async function getUserAndCrew() {
 }
 
 export function getGoogleAuthUrl() {
-  return "http://localhost:5050/api/v1/auth/google";
+  return "https://codecrew-exiy.onrender.com/api/v1/auth/google";
 }
