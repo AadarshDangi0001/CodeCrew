@@ -28,7 +28,7 @@ const Fnq = () => {
   };
 
   return (
-    <div>
+    <div id="faq-section">
       <div className="view-5">
         <h1>FAQ&nbsp;& SUPPORT</h1>
         <div className="faq">

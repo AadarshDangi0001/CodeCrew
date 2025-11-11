@@ -21,14 +21,15 @@ const Footer = () => {
               <a href="/contact">Contact</a>
             </div>
             <div className="link-column">
-              <a href="/events">Events</a>
-              <a href="/projects">Projects</a>
-              <a href="/team">Team</a>
-            </div>
+              <a href="/hackathons">Hackathons</a>
+              <a href="/joincrew">Join Us</a>
+              <a href="/crew">Crew</a>
+            </div> 
             <div className="link-column">
-              <a href="/faq">FAQ</a>
-              <a href="/resources">Resources</a>
-              <a href="/join">Join Us</a>
+              <a href="/#faq-section">FAQ</a>
+              <a href="/profile">Profile</a>
+              
+              <a href="/login">Login</a>
             </div>
           </div>
         </div>
