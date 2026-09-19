@@ -1,33 +1,20 @@
 import React from 'react'
 import Community from '../components/communitys/Community'
+import TeamMembers from '../components/team/TeamMembers'
 
 const ContactPage = () => {
   return (
-    <div className="contact mt-20">
+    <div className="contact mt-20 bg-transparent">
+      <div className="pt-16 pb-8" style={{ paddingLeft: "5vw", paddingRight: "5vw" }}>
+        {/* Page Title */}
+        <h1 className="maintext text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">CONTACT US</h1>
+      </div>
+      
+      {/* Team Members Section */}
+      <TeamMembers />
 
-   
-    <div className=" flex flex-col gap-8 bg-black py-16" style={{ paddingLeft: "5vw", paddingRight: "5vw" }}>
-      {/* Page Title */}
-      <h1 className="maintext">CONTACT US</h1>
-      {/* First Block */}
-      <div className="bg-[#18181b] rounded-lg shadow-lg p-8 w-full flex flex-col gap-4">
-        <h1 className="text-white text-2xl  mb-2">Call Us</h1>
-        <h3 className="text-zinc-200">+91 9516010257</h3>
-        <h3 className="text-zinc-200">+91 7828027332</h3>
-        <h3 className="text-zinc-200">+91 9302410770</h3>
-      </div>
-      {/* Second Block */}
-      <div className="bg-[#18181b] rounded-lg shadow-lg p-8 w-full flex flex-col gap-4">
-        <h1 className="text-white text-2xl  mb-2">Email Us</h1>
-        <h3 className="text-zinc-200">codecrew0001@gmail.com</h3>
-        <h3 className="text-zinc-200">aadarshdangi0001@gmail.com</h3>
-        <h3 className="text-zinc-200">shubhshri855@gmail.com</h3>
-      </div>
+      <Community/>
     </div>
-
-    <Community/>
-
-     </div>
   )
 }
 
