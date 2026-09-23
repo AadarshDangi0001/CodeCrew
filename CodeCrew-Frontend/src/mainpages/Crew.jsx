@@ -18,8 +18,8 @@ const Crew = () => {
         <div className="flex flex-col items-center gap-6 relative z-20">
           
           {/* Badge */}
-          <div className="inline-block px-5 py-2 rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-300 text-xs font-bold tracking-[0.2em] uppercase mb-2 animate-pulse shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-            Next Big Event
+          <div className="inline-block px-5 py-2 rounded-full border border-blue-4000/30 bg-blue-5000/10 text-blue-400 text-xl font-bold tracking-[0.5em] uppercase mb-2 animate-pulse shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+            Next Event
           </div>
 
           {/* Main Title */}
@@ -61,7 +61,7 @@ const Crew = () => {
               rel="noopener noreferrer"
               className="relative flex items-center justify-center gap-3 px-8 py-4 bg-black rounded-full text-white font-bold text-lg hover:bg-zinc-900 transition-colors duration-300 border border-white/10"
             >
-              <span>Pre-Register Now</span>
+              <span>Register Now</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

@@ -35,16 +35,16 @@ const teamMembers = [
   },
   {
     name: "Swati Bhagat",
-    role: "Marketing Manager",
-    email: "swatibhagat0001@gmail.com",
+    role: "Chief-Marketing Officer",
+    email: "bhagatswati0001@gmail.com",
     phone: "+91 9039435891",
     image: "https://ui-avatars.com/api/?name=Swati+Bhagat&background=random&color=fff&size=200",
   },
   {
     name: "Harsh Shrivastava",
     role: "Chief-Technology Officer",
-    email: "codecrew0001@gmail.com",
-    phone: "+91 6264658751",
+    email: "shrivastavaharsh0001@gmail.com",
+    phone: "9479778289",
     image: "https://ui-avatars.com/api/?name=Code+Crew&background=random&color=fff&size=200",
   },
   {
