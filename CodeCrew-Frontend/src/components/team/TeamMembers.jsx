@@ -62,36 +62,58 @@ const TeamMembers = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      const cards = cardsRef.current;
-      
-      // Pin the container while scrolling
-      // Using a timeline ensures tweens play sequentially and perfectly match the scroll distance.
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: `+=${(cards.length + 1) * 100}%`,
-          pin: true,
-          scrub: 1,
-        }
+      let mm = gsap.matchMedia();
+
+      // Desktop animation (pinned, overlapping cards)
+      mm.add("(min-width: 768px)", () => {
+        const cards = cardsRef.current;
+        
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: `+=${cards.length * 40}%`, // Reduced from *100% to *40% for faster scrolling
+            pin: true,
+            scrub: 0.5, // Reduced scrub delay to make it feel less laggy
+          }
+        });
+
+        cards.forEach((card, index) => {
+          const isLastCard = index === cards.length - 1;
+          const position = isLastCard ? "+=0.2" : ">"; // Reduced delay for the last card
+          
+          tl.to(card, {
+            yPercent: -150,
+            opacity: 0,
+            scale: 0.8,
+            rotation: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 15 + 5),
+            ease: "power1.inOut",
+            duration: 1 
+          }, position);
+        });
       });
 
-      // Animate ALL cards to fly upwards and fade out
-      cards.forEach((card, index) => {
-        const isLastCard = index === cards.length - 1;
-        
-        // For the last card, we add a delay (`+=1` in timeline time) so it waits before flying
-        const position = isLastCard ? "+=1" : ">";
-        
-        tl.to(card, {
-          yPercent: -150,
-          opacity: 0,
-          scale: 0.8,
-          rotation: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 15 + 5),
-          ease: "power1.inOut",
-          duration: 1 // Normalize duration so it perfectly maps to scroll distance
-        }, position);
+      // Mobile animation (simple fade up, no pinning)
+      mm.add("(max-width: 767px)", () => {
+        const cards = cardsRef.current;
+        cards.forEach((card) => {
+          gsap.fromTo(card, 
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1, 
+              y: 0,
+              duration: 0.6,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          );
+        });
       });
+
     }, containerRef);
 
     return () => ctx.revert();
@@ -99,20 +121,19 @@ const TeamMembers = () => {
 
   return (
     <div 
-      className="w-full relative flex flex-col items-center justify-center overflow-hidden bg-transparent" 
+      className="w-full relative flex flex-col items-center justify-center overflow-hidden bg-transparent min-h-screen md:h-screen py-24 md:py-0" 
       ref={containerRef} 
-      style={{ height: '100vh' }}
     >
-      <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 mb-12 text-center uppercase tracking-[0.3em] z-50 absolute top-20 drop-shadow-lg">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 mb-12 text-center uppercase tracking-[0.3em] z-50 md:absolute md:top-20 drop-shadow-lg">
         MEET THE TEAM
       </h2>
       
-      <div className="relative w-[90%] max-w-md h-[450px] mt-24 z-10 perspective-1000">
+      <div className="relative w-[90%] max-w-md md:h-[450px] z-10 perspective-1000 md:mt-24 flex flex-col md:block gap-8">
         {teamMembers.map((member, index) => (
           <div 
             key={index} 
             ref={el => cardsRef.current[index] = el}
-            className="absolute top-0 left-0 w-full h-full bg-zinc-900/80 backdrop-blur-xl rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/10 flex flex-col group"
+            className="md:absolute md:top-0 md:left-0 relative w-full h-[400px] md:h-full bg-zinc-900/80 backdrop-blur-md md:backdrop-blur-xl rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)] md:shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/10 flex flex-col group"
             style={{ zIndex: teamMembers.length - index, transformOrigin: 'bottom center' }}
           >
             {/* Glowing top edge on card hover */}
