@@ -2,7 +2,7 @@ import React from "react";
 
 const Crew = () => {
   // Replace this with the actual Google Form link when ready
-  const googleFormLink = "#"; 
+  const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSdjqzXKgh75QQ9RVezJCO7GVFNkrVp3EaKLetkF2prUOgiVFw/viewform?usp=publish-editor"; 
 
   return (
     <div className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 bg-transparent relative overflow-hidden">
@@ -24,7 +24,7 @@ const Crew = () => {
 
           {/* Main Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 tracking-tight drop-shadow-2xl mb-4">
-            Code Crew Summit
+            Code Convergence
           </h1>
           
           <p className="text-zinc-400 text-base md:text-xl max-w-2xl leading-relaxed mb-10">
@@ -38,7 +38,7 @@ const Crew = () => {
                 📅
               </div>
               <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">Date</h3>
-              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-blue-400 transition-colors drop-shadow-lg">Coming Soon</p>
+              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-blue-400 transition-colors drop-shadow-lg">13/10/2026</p>
             </div>
             
             <div className="bg-black/50 border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:border-purple-500/40 hover:bg-purple-900/10 transition-all duration-300 hover:-translate-y-1">
@@ -46,7 +46,7 @@ const Crew = () => {
                 📍
               </div>
               <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">Venue</h3>
-              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-purple-400 transition-colors drop-shadow-lg">Coming Soon</p>
+              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-purple-400 transition-colors drop-shadow-lg"> PBR(Paradise Binge Rooftop) ,4th Floor, Rooftop of Burger King, Plot No. A-32, Main Road, Indrapuri, Bhopal, Madhya Pradesh 462022</p>
             </div>
           </div>
 
