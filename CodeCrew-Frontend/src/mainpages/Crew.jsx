@@ -37,16 +37,16 @@ const Crew = () => {
               <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-2xl mb-1 group-hover:scale-110 transition-transform">
                 📅
               </div>
-              <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">Date</h3>
-              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-blue-400 transition-colors drop-shadow-lg">13/10/2026</p>
+              <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">Date & Time</h3>
+              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-blue-400 transition-colors drop-shadow-lg">20/11/2026 & 4:30 pm to 7:00 pm</p>
             </div>
             
             <div className="bg-black/50 border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 group hover:border-purple-500/40 hover:bg-purple-900/10 transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl mb-1 group-hover:scale-110 transition-transform">
                 📍
               </div>
-              <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">Venue</h3>
-              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-purple-400 transition-colors drop-shadow-lg"> PBR(Paradise Binge Rooftop) ,4th Floor, Rooftop of Burger King, Plot No. A-32, Main Road, Indrapuri, Bhopal, Madhya Pradesh 462022</p>
+              <h3 className="text-zinc-500 text-xs font-black uppercase tracking-widest">venue</h3>
+              <p className="text-white text-xl md:text-2xl font-bold font-mono group-hover:text-purple-400 transition-colors drop-shadow-lg">Sheryians Coding School, 1st floor Biba, Main Road, Indrapuri, Bhopal</p>
             </div>
           </div>
 

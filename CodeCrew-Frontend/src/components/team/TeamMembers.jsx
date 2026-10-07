@@ -16,7 +16,7 @@ const teamMembers = [
     name: "Shubh Shrivastava",
     role: "Co-Founder & Developer",
     email: "shrivastavashubh0001@gmail.com",
-    phone: "+91 7828027332",
+    phone: "+91 9302410770",
     image: "https://ui-avatars.com/api/?name=Shubh+Shrivastava&background=random&color=fff&size=200",
   },
   {
