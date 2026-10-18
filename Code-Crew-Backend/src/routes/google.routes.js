@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 
 router.get("/google/callback",
-  passport.authenticate("google", { failureRedirect: "https://www.codecrew.space/?error=auth_failed" }),
+  passport.authenticate("google", { failureRedirect: "https://www.codecrew.online/?error=auth_failed" }),
   (req, res) => {
     // Issue JWT token and set cookie
     const token = req.user.getSignedJwtToken();
@@ -17,7 +17,7 @@ router.get("/google/callback",
       maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
     });
     // Redirect to frontend with token in URL so frontend can store it in localStorage
-    res.redirect(`https://www.codecrew.space/?token=${token}`);
+    res.redirect(`https://www.codecrew.online/?token=${token}`);
   }
 );
 
